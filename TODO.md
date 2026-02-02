@@ -14,7 +14,7 @@ File to track progress
 
 ## Data
 
-- [ ] Pull daily prices for VOO, QQQ, ARKK, MAGS
+- [X] Pull daily prices for VOO, QQQ, ARKK, MAGS
 
 - [ ] Clean and align dates
 
