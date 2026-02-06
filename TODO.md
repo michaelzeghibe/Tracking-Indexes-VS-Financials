@@ -44,11 +44,11 @@ File to track progress
 
 ## Risk Metrics
 
-- [ ] Volatility
+- [X] Volatility
 
-- [ ] Sharpe ratios
+- [X] Sharpe ratios
 
-- [ ] Betas vs VOO
+- [X] Betas vs VOO
 
 
 
