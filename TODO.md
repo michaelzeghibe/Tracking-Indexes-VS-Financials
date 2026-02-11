@@ -2,19 +2,19 @@ File to track progress
 
 
 
-- [ ] continue to find data for project 
+- [X] continue to find data for project 
 
 - [X] form group 
 
 - [X] Make ToDo file and upload it to the class repository
 
-- [ ] Start working on the skeleton of the project 
+- [X] Start working on the skeleton of the project 
 
 
 
 ## Data
 
-- [ ] Pull daily prices for VOO, QQQ, ARKK, MAGS
+- [X] Pull Monthly prices for VOO, QQQ, ARKK, MAGS
 
 - [ ] Clean and align dates
 
@@ -24,11 +24,11 @@ File to track progress
 
 ## EDA
 
-- [ ] Summary statistics
+- [X] Summary statistics
 
-- [ ] Static correlation matrix
+- [X] Static correlation matrix
 
-- [ ] Correlation heatmap
+- [X] Correlation heatmap
 
 
 
@@ -44,11 +44,11 @@ File to track progress
 
 ## Risk Metrics
 
-- [ ] Volatility
+- [X] Volatility
 
-- [ ] Sharpe ratios
+- [X] Sharpe ratios
 
-- [ ] Betas vs VOO
+- [X] Betas vs VOO
 
 
 
