@@ -34,11 +34,11 @@ File to track progress
 
 ## Time-Varying Analysis
 
-- [ ] 30-day rolling correlations
+- [X] 1 Year rolling correlations
 
-- [ ] 60-day rolling correlations
+- [X] 2 Year rolling correlations
 
-- [ ] 90-day rolling correlations
+- [X] 3 Year rolling correlations
 
 
 
