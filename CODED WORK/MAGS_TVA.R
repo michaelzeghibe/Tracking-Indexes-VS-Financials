@@ -1,5 +1,4 @@
-
-# MONTHLY Rolling Correlations 
+# MONTHLY Rolling Correlations - MAGS 
 
 library(readxl)
 library(dplyr)
@@ -40,18 +39,19 @@ prices <- arkk %>%
   arrange(Date) %>%
   filter(if_all(-Date, ~ !is.na(.)))
 
-# Monthly
+# Convert to monthly
 monthly_prices <- prices %>%
   mutate(Month = floor_date(Date, "month")) %>%
   group_by(Month) %>%
   summarise(across(-Date, ~ last(.)), .groups = "drop") %>%
   rename(Date = Month)
 
+# Monthly log returns
 monthly_returns <- monthly_prices %>%
   mutate(across(-Date, ~ c(NA, diff(log(.))))) %>%
   drop_na()
 
-# Rolling correlation
+# Rolling correlation function
 rolling_cor <- function(data, width, col1, col2) {
   rollapply(data[, c(col1, col2)], width = width,
             FUN = function(x) {
@@ -64,8 +64,8 @@ rolling_cor <- function(data, width, col1, col2) {
 w1 <- 12; w2 <- 24; w3 <- 36
 
 pairs <- list(
-  c("ARKK", "QQQ"), c("ARKK", "VOO"), c("ARKK", "MAGS"), c("ARKK", "VIX"),
-  c("QQQ", "VOO"), c("QQQ", "MAGS"), c("VOO", "MAGS")
+  c("MAGS", "ARKK"), c("MAGS", "QQQ"), c("MAGS", "VOO"), c("MAGS", "VIX"),
+  c("ARKK", "QQQ"), c("ARKK", "VOO"), c("QQQ", "VOO")
 )
 
 results <- list()
@@ -85,18 +85,17 @@ for (name in names(results)) {
   rolling_df[[name]] <- c(rep(NA, pad), vec)
 }
 
-
 plot_data <- rolling_df %>%
-  select(Date, starts_with("ARKK_")) %>%
+  select(Date, starts_with("MAGS_")) %>%
   pivot_longer(-Date, names_to = "Pair_Window", values_to = "Correlation") %>%
   separate(Pair_Window, into = c("Pair", "Window"), sep = "_") %>%
   filter(!is.na(Correlation)) %>%
-  mutate(Label = paste(Pair, Window, sep = " "))   # Clear label for legend
+  mutate(Label = paste(Pair, Window, sep = " "))
 
 ggplot(plot_data, aes(x = Date, y = Correlation, color = Label)) +
   geom_line(linewidth = 0.95) +
   facet_wrap(~ Pair, ncol = 2) +
-  labs(title = "Rolling Correlations with ARKK (Monthly)",
+  labs(title = "Rolling Correlations with MAGS (Monthly)",
        subtitle = "1-year (12 months), 2-year (24 months), 3-year (36 months) rolling windows",
        x = "", y = "Correlation",
        color = "Correlation Pair & Window") +
@@ -104,8 +103,6 @@ ggplot(plot_data, aes(x = Date, y = Correlation, color = Label)) +
   theme(legend.position = "bottom",
         legend.title = element_text(face = "bold"),
         strip.text = element_text(face = "bold")) +
-  scale_color_viridis_d(option = "plasma", end = 0.9) +   # Nice distinct colors
+  scale_color_viridis_d(option = "plasma", end = 0.9) +
   ylim(-1, 1)
 
-# Export
-write.csv(rolling_df, "rolling_correlations_monthly_labeled.csv", row.names = FALSE)
