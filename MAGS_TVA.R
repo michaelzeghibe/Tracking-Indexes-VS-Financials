@@ -7,8 +7,7 @@ library(zoo)
 library(ggplot2)
 library(lubridate)
 
-
-folder_path <- "C:/Users/micha/OneDrive - Providence College/Data Cap/Tracking-Indexes-VS-Financials"
+folder_path <- "C:/Users/micha/OneDrive - Providence College/Data Cap/Tracking-Indexes-VS-Financials/Data Scraped Online"
 
 read_price_sheet <- function(filename, asset_name) {
   full_path <- file.path(folder_path, filename)
