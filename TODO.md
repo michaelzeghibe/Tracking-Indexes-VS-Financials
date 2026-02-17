@@ -16,9 +16,9 @@ File to track progress
 
 - [X] Pull Monthly prices for VOO, QQQ, ARKK, MAGS
 
-- [ ] Clean and align dates
+- [X] Clean and align dates
 
-- [ ] Compute log returns
+- [X] Compute log returns
 
 
 
@@ -50,7 +50,24 @@ File to track progress
 
 - [X] Betas vs VOO
 
+## Model Various Investment Strategies 
+- [ ] Asset Allocation determination
 
+- [ ] Strategy 1: Aggressive
+
+- [ ] strategy 2: moderate
+
+- [ ] Strategy 3: Conservative
+
+## Bayesian Updating Framework 
+
+- [ ] Trading and exit Rules
+
+- [ ] Profit Taking
+
+- [ ] Adjust Portfolio weight accordingly
+
+- [ ] improve allocation over time
 
 ## Interpretation
 
