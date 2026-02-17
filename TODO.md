@@ -61,13 +61,13 @@ File to track progress
 
 ## Bayesian Updating Framework 
 
-- [ ] Trading and exit Rules
+- [X] Trading and exit Rules
 
-- [ ] Profit Taking
+- [X] Profit Taking
 
-- [ ] Adjust Portfolio weight accordingly
+- [X] Adjust Portfolio weight accordingly
 
-- [ ] improve allocation over time
+- [X] improve allocation over time
 
 # Week 7-8
 
