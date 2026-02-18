@@ -1,24 +1,24 @@
 File to track progress 
 
-
+# Week 1
 
 - [X] continue to find data for project 
 
 - [X] form group 
 
-- [X] Make ToDo file and upload it to the class repository
+- [X] Make a ToDo file and upload it to the class repository
 
 - [X] Start working on the skeleton of the project 
 
-
+# Week 2-4
 
 ## Data
 
 - [X] Pull Monthly prices for VOO, QQQ, ARKK, MAGS
 
-- [ ] Clean and align dates
+- [X] Clean and align dates
 
-- [ ] Compute log returns
+- [X] Compute log returns
 
 
 
@@ -31,6 +31,15 @@ File to track progress
 - [X] Correlation heatmap
 
 
+## Risk Metrics
+
+- [X] Volatility
+
+- [X] Sharpe ratios
+
+- [X] Betas vs VOO
+
+# Week 5
 
 ## Time-Varying Analysis
 
@@ -40,17 +49,27 @@ File to track progress
 
 - [X] 3 Year rolling correlations
 
+# Week 6
+## Model Various Investment Strategies 
+- [ ] Asset Allocation determination
 
+- [ ] Strategy 1: Aggressive
 
-## Risk Metrics
+- [ ] strategy 2: moderate
 
-- [X] Volatility
+- [ ] Strategy 3: Conservative
 
-- [X] Sharpe ratios
+## Bayesian Updating Framework 
 
-- [X] Betas vs VOO
+- [X] Trading and exit Rules
 
+- [X] Profit Taking
 
+- [X] Adjust Portfolio weight accordingly
+
+- [X] improve allocation over time
+
+# Week 7-8
 
 ## Interpretation
 
