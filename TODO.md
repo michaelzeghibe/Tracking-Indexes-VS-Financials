@@ -51,13 +51,13 @@ File to track progress
 
 # Week 6
 ## Model Various Investment Strategies 
-- [ ] Asset Allocation determination
+- [X] Asset Allocation determination
 
-- [ ] Strategy 1: Aggressive
+- [X] Strategy 1: Aggressive
 
-- [ ] strategy 2: moderate
+- [X] strategy 2: moderate
 
-- [ ] Strategy 3: Conservative
+- [X] Strategy 3: Conservative
 
 ## Bayesian Updating Framework 
 
